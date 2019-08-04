@@ -1,0 +1,261 @@
+<style>
+	.sidebar{
+		position: fixed;
+		top: 0;
+		left: -300px;
+		bottom: 0;
+		width: 300px;
+		border-right: 12px solid #F4C2C2;
+		background-color: #FFEEF2;
+		z-index: 6;
+		padding: 0;
+		-webkit-transition: all 0.2s ease-out;
+		-moz-transition: all 0.2s ease-out;
+		-o-transition: all 0.2s ease-out;
+		transition: all 0.2s ease-out;
+	}
+	.heartbutton{
+		position: absolute;
+		right: -28px;
+		top: calc(50% - 20px);
+		width: 12px;
+		height: 12px;
+		
+		color: white;
+		background-color: #CD5E77;
+		cursor: pointer;
+		transform: rotate(45deg);
+		animation: heartbeat 1.4s linear infinite
+	}
+	.heartbutton:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #CD5E77;
+		transform: translateY(-50%);
+		border-radius: 50%;
+	}
+
+	.heartbutton:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #CD5E77;
+		transform: translateX(-50%);
+		border-radius: 50%;
+	}
+
+	@keyframes heartbeat {
+		0% { transform: rotate(45deg) scale(1); }
+		25% { transform: rotate(45deg) scale(1); }
+		30% { transform: rotate(45deg) scale(1.4); }
+		50% { transform: rotate(45deg) scale(1.2); }
+		70% { transform: rotate(45deg) scale(1.4); }
+		100% { transform: rotate(45deg) scale(1); }
+	}
+	
+	.wrapperbutton{
+		
+		position: absolute;
+		right: -42px;
+		top: calc(46.5%);
+		width: 40px;
+		height: 40px;
+		color: white;
+		background-color: #F4C2C2;
+		cursor: pointer;
+		border-radius: 0 3px 3px 0;
+		-webkit-transition: all 0.2s ease-out;
+		-moz-transition: all 0.2s ease-out;
+		-o-transition: all 0.2s ease-out;
+		transition: all 0.2s ease-out;
+	}
+	
+	.container{
+	    top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: grid;
+		grid-template-rows: 683px 30% 160%;
+		justify-items: center;
+	}
+	.grid-container{
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-template-rows: auto auto auto auto;
+	}
+	.middle{;
+		border-left: 4px solid #B7E9F7;
+		border-right: 4px solid #B7E9F7;
+		width: 100%;
+		position:relative;
+		overflow:hidden;
+	}
+	.bottom{
+		background-color:#F5FCFF;
+		border: 4px solid #B7E9F7;
+		width: 100%;
+	}
+	.card{
+		position: relative;
+	}
+	.front, .back {
+		position: absolute;
+		width: 100%; height: 100%;
+		transition: transform 1s;
+		backface-visibility:hidden;
+	}
+	.front{
+		background-color: white;
+	}
+	.back{
+		background-image:url(WS_P2799ok.jpg);
+		background-repeat:no-repeat;
+		transform: rotateX(180deg); 
+	}
+	.back1{
+		background-position:0% 0%;
+	}
+	.front.rotate{ 
+		transform: rotateX(180deg); 
+	}
+	.back.rotate{ 
+		transform: rotateX(360deg); 
+	}
+</style>
+<!-- <div class="sidebar">
+	<div class="wrapperbutton">
+		
+	</div><div class="heartbutton"></div>
+</div> -->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+var url = 'WS_P2799ok.jpg';
+var img = new Image();
+var numberOfPhotos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+img.onload = function(){
+  var height = img.height;
+  var width = img.width;
+  console.log(height);
+  console.log(width);
+  $('.container').css( 'grid-template-rows', height + ' 30% 160%' );
+  $('.grid-container').css('height', height);
+  $('.grid-container').css('width', width);
+  $('.card').css('width', width/4);
+  $('.card').css('height', height/4);
+  $('.back2').css('background-position', -width/4 + ' 0');
+  $('.back3').css('background-position', (-width/4)*2 + ' 0');
+  $('.back4').css('background-position', (-width/4)*3 + ' 0');
+  $('.back5').css('background-position', '0 ' + -height/4);
+  $('.back6').css('background-position', (-width/4) + ' ' + -height/4);
+  $('.back7').css('background-position', (-width/4)*2 + ' ' + -height/4);
+  $('.back8').css('background-position', (-width/4)*3 + ' ' + -height/4);
+  $('.back9').css('background-position', '0 ' + (-height/4)*2);
+  $('.back10').css('background-position', (-width/4) + ' ' + (-height/4)*2);
+  $('.back11').css('background-position', (-width/4)*2 + ' ' + (-height/4)*2);
+  $('.back12').css('background-position', (-width/4)*3 + ' ' + (-height/4)*2);
+  $('.back13').css('background-position', '0 ' + (-height/4)*3);
+  $('.back14').css('background-position', (-width/4) + ' ' + (-height/4)*3);
+  $('.back15').css('background-position', (-width/4)*2 + ' ' + (-height/4)*3);
+  $('.back16').css('background-position', (-width/4)*3 + ' ' + (-height/4)*3);
+  var tid = setInterval(flipImage, 200);
+	function flipImage() {
+		//console.log('flip image');
+		var index = Math.floor(Math.random() * numberOfPhotos.length);   
+		var photoIndex = numberOfPhotos[index];
+		$('.front' + photoIndex).addClass('rotate'); 	//flip image
+		$('.back' + photoIndex).addClass('rotate'); 	//flip image
+		numberOfPhotos.splice(index, 1); // delete already flip image
+		if(numberOfPhotos.length == 0){
+			//console.log('stop timer');
+			abortTimer(tid);
+		}
+	}
+}
+img.src = url;
+
+
+function abortTimer(timerInterval) { // to be called when you want to stop the timer
+  clearInterval(timerInterval);
+}
+</script>
+<div class="container">
+		<div class="grid-container">
+			<div class="card">
+				<div class="front front1"></div>
+				<div class="back back1"></div>
+			</div>
+			<div class="card">
+				<div class="front front2"></div>
+				<div class="back back2"></div>
+			</div>
+			<div class="card">
+				<div class="front front3"></div>
+				<div class="back back3"></div>  
+			</div>
+			<div class="card">
+				<div class="front front4"></div>
+				<div class="back back4"></div>
+			</div>
+			<div class="card">
+				<div class="front front5"></div>
+				<div class="back back5"></div>
+			</div>
+			<div class="card">
+				<div class="front front6"></div>
+				<div class="back back6"></div>
+			</div>
+			<div class="card">
+				<div class="front front7"></div>
+				<div class="back back7"></div> 
+			</div>
+			<div class="card">			
+				<div class="front front8"></div>
+				<div class="back back8"></div>
+			</div>
+			<div class="card">
+				<div class="front front9"></div>
+				<div class="back back9"></div>
+			</div>
+			<div class="card">
+				<div class="front front10"></div>
+				<div class="back back10"></div>
+			</div>
+			<div class="card">
+				<div class="front front11"></div>
+				<div class="back back11"></div>
+			</div>
+			<div class="card">
+				<div class="front front12"></div>
+				<div class="back back12"></div>
+			</div>
+			<div class="card">
+				<div class="front front13"></div>
+				<div class="back back13"></div>
+			</div>
+			<div class="card">
+				<div class="front front14"></div>
+				<div class="back back14"></div>
+			</div>
+			<div class="card">
+				<div class="front front15"></div>
+				<div class="back back15"></div> 
+			</div>
+			<div class="card">
+				<div class="front front16"></div>
+				<div class="back back16"></div>
+			</div>
+		</div>
+	<div class="middle"></div>
+	<div class="bottom"></div>
+</div>
