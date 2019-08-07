@@ -13,15 +13,17 @@ html{
 	perspective: 1px;
 	transform-style: preserve-3d;
 	overflow-x:	hidden;
-	overflow-y: auto;
+	overflow-y: scroll;
+	webkit-overflow-scrolling: touch;
 }
 h1{
 	text-align: center;
 }
 .parallax-wrapper{
+	background: rgba(128,91,84,.5);
 	width: 100vw;
 	height: 100vh;
-	padding-top: 30vw 0 5vw;
+	padding-top: 30vw;
 	box-sizing:	border-box;
 	transform-style: preserve-3d;
 }
