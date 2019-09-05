@@ -86,6 +86,7 @@
       right: 5rem; } }
 
 .navigation__nav {
+  overflow-y: scroll;
   height: 100vh;
   position: fixed;
   top: 0;
