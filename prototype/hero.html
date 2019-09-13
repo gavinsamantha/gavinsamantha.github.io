@@ -1,9 +1,12 @@
 <html>
 	<header>
-		<link rel="stylesheet" type="text/css" href="style.prefix2.css"/>
+		<link rel="stylesheet" type="text/css" href="modern-responsive-hamburger-navigation/style.css"/>
 		<link rel="stylesheet" type="text/css" href="photogallery.css"/>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+		<script src="modern-responsive-hamburger-navigation/scripts.js" defer></script>
 		<style>
 			body{
+				overflow-x: hidden;
 				margin: 0;
 				font-family: "linea-basic-10";
 				src:url("fonts/linea-basic-10.eot");
@@ -92,18 +95,19 @@
 				display: grid;
 				grid-template-rows: 1fr 1fr 1fr;
 				justify-items: center;
+				align-items: center;
 			}
 			.header{
-				padding-top: 50px;
+				padding-top: 80px;
 			}
 			h2{
-				font-size: 30px;
+				font-size: 80px;
 			}
 			h1{
 				font-size: 60px;
 			}
 			h6{
-				font-size: 20px;
+				font-size: 40px;
 			}	
 			h3{
 				font-size: 20px;
@@ -112,26 +116,33 @@
 		</style>
 	</header>
 	<body>
-		<div class="navigation">
-			<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-			<label for="navi-toggle" class="navigation__button">
-				<span class="navigation__icon">&nbsp;</span>
-			</label>
-			<div class="navigation__background">&nbsp;</div>
-			<nav class="navigation__nav">
-                <div class="gallery-container">
-					<div class="photosquare item1"><img class="circle-pic" src="mobile_photos/gallery_tall_1.jpg"></div>
-					<div class="photosquare item2"><img class="circle-pic" src="mobile_photos/gallery_tall_1.jpg"></div>
-					<div class="photosquare item3"><img class="circle-pic" src="mobile_photos/gallery_tall_1.jpg"></div>				
-					<div class="photosquare item4"><img class="circle-pic" src="mobile_photos/gallery_tall_1.jpg"></div>
-					<div class="photosquare item5"><img class="circle-pic" src="mobile_photos/gallery_tall_1.jpg"></div>
-					<div class="photosquare item6"><img class="circle-pic" src="mobile_photos/gallery_tall_1.jpg"></div>
+		<header class="navigation">
+			<a href="#" class="nav__trigger"><span class="nav__icon"></span></a>
+			<nav class="nav">
+				<div class="gallery-container">
+					<div class="photosquare item1"><img class="gallery-grid-photo" src="mobile_photos/grid1.jpg"></img></div>
+					<div class="photosquare item2"><img class="gallery-grid-photo" src="mobile_photos/grid2.jpg"></img></div>
+					<div class="photosquare item3"><img class="gallery-grid-photo" src="mobile_photos/grid3.jpg"></img></div>				
+					<div class="photosquare item4"><img class="gallery-grid-photo" src="mobile_photos/grid4.jpg"></img></div>
+					<div class="photosquare item5"><img class="gallery-grid-photo" src="mobile_photos/grid5.jpg"></img></div>
+					<div class="photosquare item6"><img class="gallery-grid-photo" src="mobile_photos/grid6.jpg"></img></div>
+					<div class="photosquare item7"><img class="gallery-grid-photo" src="mobile_photos/grid7.jpg"></img></div>
+					<div class="photosquare item8"><img class="gallery-grid-photo" src="mobile_photos/grid8.jpg"></img></div>
+					<div class="photosquare item9"><img class="gallery-grid-photo" src="mobile_photos/grid9.jpg"></img></div>
+					<div class="photosquare item10"><img class="gallery-grid-photo" src="mobile_photos/grid10.jpg"></img></div>
+					<div class="photosquare item11"><img class="gallery-grid-photo" src="mobile_photos/grid11.jpg"></img></div>
+					<div class="photosquare item12"><img class="gallery-grid-photo" src="mobile_photos/grid12.jpg"></img></div>
 				</div>
 			</nav>
-			
-		</div>
+		</header>
 		<div class="container">
 			<div class="overlay">
+				<div class="ribbon ribbon-top-left">
+					<div class="button-container">
+						<div class="heartbutton"></div>
+					</div>
+					<div class="ribbon-container"></div>
+				</div>
 				<img class="hero" src="mobile_hero.svg" />
 			</div>
 			<div class="heading-container">
