@@ -1,19 +1,16 @@
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="modern-responsive-hamburger-navigation/style.css"/>
 		<link rel="stylesheet" type="text/css" href="photogallery.css"/>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
 		<script src="modern-responsive-hamburger-navigation/scripts.js" defer></script>
 		<style>
 			body{
+				font-family: 'Dancing Script', cursive;
 				overflow-x: hidden;
 				margin: 0;
-				font-family: "linea-basic-10";
-				src:url("fonts/linea-basic-10.eot");
-				src:url("fonts/linea-basic-10.eot?#iefix") format("embedded-opentype"),
-				url("fonts/linea-basic-10.woff") format("woff"),
-				url("fonts/linea-basic-10.ttf") format("truetype"),
-				url("fonts/linea-basic-10.svg#linea-basic-10") format("svg");
 				font-weight: normal;
 				font-style: normal;
 				color: white;
@@ -58,13 +55,14 @@
 				justify-items: center;
 				padding-top: 100px;
 				background-color: #f6dcd3; 
+				padding-bottom: 100px;
 			}
 			.pink-text-container{
 				overflow:hidden;
 				display:grid;
 				justify-items: center;
-				padding-top: 100px;
 				background-color: #f6dcd3; 
+				padding-bottom: 100px;
 			}
 			.image-cropper {
 				width: 500px;
@@ -77,7 +75,8 @@
 			  display: inline;
 			  margin: 0 auto;
 			  height: 100%;
-			  width: auto;
+			  width: 500px;
+			  object-fit: cover;
 			}
 			.hero{
 				position:relative;
@@ -113,25 +112,40 @@
 				font-size: 20px;
 				color: black;
 			}
+			.info{
+				font-family: 'Noto Sans TC', sans-serif;
+				font-size: 30px;
+				text-align: center;
+				line-height: 1.6;
+			}
 		</style>
 	</head>
 	<body>
 		<header class="navigation">
 			<a href="#" class="nav__trigger"><span class="nav__icon"></span></a>
 			<nav class="nav">
-				<div class="gallery-container">
-					<div class="photosquare item1"><img class="gallery-grid-photo" src="mobile_photos/grid1.jpg"></img></div>
-					<div class="photosquare item2"><img class="gallery-grid-photo" src="mobile_photos/grid2.jpg"></img></div>
-					<div class="photosquare item3"><img class="gallery-grid-photo" src="mobile_photos/grid3.jpg"></img></div>				
-					<div class="photosquare item4"><img class="gallery-grid-photo" src="mobile_photos/grid4.jpg"></img></div>
-					<div class="photosquare item5"><img class="gallery-grid-photo" src="mobile_photos/grid5.jpg"></img></div>
-					<div class="photosquare item6"><img class="gallery-grid-photo" src="mobile_photos/grid6.jpg"></img></div>
-					<div class="photosquare item7"><img class="gallery-grid-photo" src="mobile_photos/grid7.jpg"></img></div>
-					<div class="photosquare item8"><img class="gallery-grid-photo" src="mobile_photos/grid8.jpg"></img></div>
-					<div class="photosquare item9"><img class="gallery-grid-photo" src="mobile_photos/grid9.jpg"></img></div>
-					<div class="photosquare item10"><img class="gallery-grid-photo" src="mobile_photos/grid10.jpg"></img></div>
-					<div class="photosquare item11"><img class="gallery-grid-photo" src="mobile_photos/grid11.jpg"></img></div>
-					<div class="photosquare item12"><img class="gallery-grid-photo" src="mobile_photos/grid12.jpg"></img></div>
+				<div class="ribbon ribbon-top-left">
+					<div class="button-container">
+						<div class="heartbutton gallery"></div>
+					</div>
+					<div class="ribbon-container"></div>
+				</div>
+				<div class="outer-gallery-container">
+					<div><img class="top-deco" src="mobile_photos/top-deco.png"></img></div>
+					<div class="gallery-container">
+						<div class="photosquare item1"><img class="gallery-grid-photo" src="mobile_photos/grid1.jpg"></img></div>
+						<div class="photosquare item2"><img class="gallery-grid-photo" src="mobile_photos/grid2.jpg"></img></div>
+						<div class="photosquare item3"><img class="gallery-grid-photo" src="mobile_photos/grid3.jpg"></img></div>				
+						<div class="photosquare item4"><img class="gallery-grid-photo" src="mobile_photos/grid4.jpg"></img></div>
+						<div class="photosquare item5"><img class="gallery-grid-photo" src="mobile_photos/grid5.jpg"></img></div>
+						<div class="photosquare item6"><img class="gallery-grid-photo" src="mobile_photos/grid6.jpg"></img></div>
+						<div class="photosquare item7"><img class="gallery-grid-photo" src="mobile_photos/grid7.jpg"></img></div>
+						<div class="photosquare item8"><img class="gallery-grid-photo" src="mobile_photos/grid8.jpg"></img></div>
+						<div class="photosquare item9"><img class="gallery-grid-photo" src="mobile_photos/grid9.jpg"></img></div>
+						<div class="photosquare item10"><img class="gallery-grid-photo" src="mobile_photos/grid10.jpg"></img></div>
+						<div class="photosquare item11"><img class="gallery-grid-photo" src="mobile_photos/grid11.jpg"></img></div>
+						<div class="photosquare item12"><img class="gallery-grid-photo" src="mobile_photos/grid12.jpg"></img></div>
+					</div>
 				</div>
 			</nav>
 		</header>
@@ -156,38 +170,42 @@
 		</div>
 		<div class="white-container">
 			<div class="image-cropper">
-				<img class="circle-pic" src="WS_P2799ok.svg">
+				<img class="circle-pic" src="mobile_photos/circle1.jpg">
 			</div>
 		</div>
 		<div class="white-text-container">
-			<h3>往愉景灣交通</h2>
-			<h3>我們為你安排了免費旅遊巴, 上車地點及時間如下:</h3>
-			<h3>10:45 將軍澳 XX街</h3>
-			<h3>10:30 旺角 XX街</h3>
+			<h3 class="info">往愉景灣交通</h2>
+			<h3 class="info">我們為你安排了免費旅遊巴, 上車地點及時間如下:</h3>
+			<h3 class="info">10:45 將軍澳 XX街</h3>
+			<h3 class="info">10:30 旺角 XX街</h3>
 		</div>
 		<div class="pink-container">
 			<div class="image-cropper">
-				<img class="circle-pic" src="WS_P2799ok.svg">
+				<img class="circle-pic" src="mobile_photos/circle2.jpg">
 			</div>
-			<h3>Hello world</h2>
-			<h3>12-23-2222</h3>
-			<h3>Hello world</h2>
 		</div>
-				<div class="white-container">
+		<div class="pink-text-container">
+			<h3 class="info">港鐡:</h3>
+			<h3 class="info">欣澳站A出口</h3>
+			<h3 class="info">換乘DB03P巴士</h3>
+		</div>
+		<div class="white-container">
 			<div class="image-cropper">
-				<img class="circle-pic" src="WS_P2799ok.svg">
+				<img class="circle-pic" src="mobile_photos/circle3.jpg">
 			</div>
-			<h3>Hello world</h2>
-			<h3>12-23-2222</h3>
-			<h3>Hello world</h2>
+		</div>
+		<div class="white-text-container">
+			<h3 class="info">愉景灣客輪:</h2>
+			<h3 class="info">中環3 號碼頭乘坐客輪</h3>
+			<h3 class="info">換乘 T4 或 T9 巴士</h3>
 		</div>
 		<div class="pink-container">
 			<div class="image-cropper">
-				<img class="circle-pic" src="WS_P2799ok.svg">
+				<img class="circle-pic" src="mobile_photos/circle4.jpg">
 			</div>
-			<h3>Hello world</h2>
-			<h3>12-23-2222</h3>
-			<h3>Hello world</h2>
+		</div>
+		<div class="pink-text-container">
+			<h3 class="info">請注意, 私家車不能進入愉景灣</h3>
 		</div>
 	</body>
 </html>

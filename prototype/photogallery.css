@@ -1,13 +1,27 @@
+.outer-gallery-container{
+	border: 10px solid #d4938b;
+	display: grid;
+	grid-template-rows: 20%;
+	justify-items: center;
+}
+
+.top-deco{
+	width: 100%;
+	margin-top: 3rem;
+}
+
 .gallery-container{
 	display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(24, 5vw);
     grid-gap: 2vw;
-	margin: 15rem 3.5vw 15rem 3.5vw;
+	margin: 0 3.5vw 0 3.5vw;
 }
 .photosquare{
 	background-color: white;
 	overflow: hidden;
+	border: 3px solid #fbbc93;
+	border-radius: 25px;
 }
 
 .gallery-grid-photo{
@@ -106,14 +120,14 @@
   z-index: -1;
   content: '';
   display: block;
-  border: 5px solid #9B1C31;
+  border: 5px solid #fbbc93;
 }
 .ribbon-container{
   position: absolute;
   display: block;
   width: 600px;
   padding: 15px 0;
-  background-color: #9B1C31;
+  background-color: #fbbc93;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
   color: #fff;
   font: 700 18px/1 'Lato', sans-serif;
@@ -132,7 +146,7 @@
 .ribbon-top-left::after {
 	width: 20px;
 	height: 20px;
-	background-color: #9B1C31;
+	background-color: #fbbc93;
   border-top-color: transparent;
   border-left-color: transparent;
 }
@@ -155,7 +169,7 @@
 		position: relative;
 		width: 60px;
 		height: 60px;
-		background-color: #CD5E77;
+		background-color: #f6dcd3;
 		transform: rotate(45deg);
 		animation: heartbeat 1.4s linear infinite	
 	}
@@ -166,7 +180,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #CD5E77;
+		background-color: #f6dcd3;
 		transform: translateY(-50%);
 		border-radius: 50%;
 	}
@@ -178,9 +192,19 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #CD5E77;
+		background-color: #f6dcd3;
 		transform: translateX(-50%);
 		border-radius: 50%;
+	}
+
+	.heartbutton.gallery{
+		background-color: #a83f39;
+	}
+	.heartbutton.gallery:before{
+		background-color: #a83f39;
+	}
+	.heartbutton.gallery:after{
+		background-color: #a83f39;
 	}
 
 	@keyframes heartbeat {
