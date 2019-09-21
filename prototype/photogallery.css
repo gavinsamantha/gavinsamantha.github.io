@@ -1,7 +1,7 @@
 .outer-gallery-container{
-	border: 10px solid #d4938b;
+	border: 10px solid #ffc0cb;
 	display: grid;
-	grid-template-rows: 20%;
+	grid-template-rows: 18%;
 	justify-items: center;
 }
 
@@ -20,7 +20,7 @@
 .photosquare{
 	background-color: white;
 	overflow: hidden;
-	border: 3px solid #fbbc93;
+	border: 3px solid #ffc0cb;
 	border-radius: 25px;
 }
 
@@ -120,14 +120,14 @@
   z-index: -1;
   content: '';
   display: block;
-  border: 5px solid #fbbc93;
+  border: 5px solid #ffeef2;
 }
 .ribbon-container{
   position: absolute;
   display: block;
   width: 600px;
   padding: 15px 0;
-  background-color: #fbbc93;
+  background-color: #ffeef2;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
   color: #fff;
   font: 700 18px/1 'Lato', sans-serif;
@@ -146,7 +146,7 @@
 .ribbon-top-left::after {
 	width: 20px;
 	height: 20px;
-	background-color: #fbbc93;
+	background-color: #ffeef2;
   border-top-color: transparent;
   border-left-color: transparent;
 }
@@ -169,7 +169,7 @@
 		position: relative;
 		width: 60px;
 		height: 60px;
-		background-color: #f6dcd3;
+		background-color: #ffc0cb;
 		transform: rotate(45deg);
 		animation: heartbeat 1.4s linear infinite	
 	}
@@ -180,7 +180,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #f6dcd3;
+		background-color: #ffc0cb;
 		transform: translateY(-50%);
 		border-radius: 50%;
 	}
@@ -192,7 +192,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #f6dcd3;
+		background-color: #ffc0cb;
 		transform: translateX(-50%);
 		border-radius: 50%;
 	}
