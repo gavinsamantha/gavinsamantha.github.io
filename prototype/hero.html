@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK:300&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="modern-responsive-hamburger-navigation/style.css"/>
 		<link rel="stylesheet" type="text/css" href="photogallery.css"/>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
@@ -44,10 +44,10 @@
 			}
 			.white-text-container{
 				overflow:hidden;
-				display:grid;
-				justify-items: center;
-				padding-top: 100px;
-				padding-bottom: 100px;
+				padding-bottom: 10%;
+			}
+			.pink{
+				background-color: #f6dcd3; 
 			}
 			.pink-container{
 				overflow:hidden;
@@ -59,10 +59,8 @@
 			}
 			.pink-text-container{
 				overflow:hidden;
-				display:grid;
-				justify-items: center;
-				background-color: #f6dcd3; 
-				padding-bottom: 100px;
+				background-color: #f6dcd3;
+				padding-bottom: 10%;
 			}
 			.image-cropper {
 				width: 500px;
@@ -113,16 +111,51 @@
 				color: black;
 			}
 			.info{
-				font-family: 'Noto Sans TC', sans-serif;
-				font-size: 29px;
+				font-family: 'Noto Sans HK', sans-serif;
+				font-size: 25px;
 				text-align: center;
-				line-height: 1.6;
+				line-height: 2.5;
+				color: black;
 			}
 			.info-header{
-				 text-decoration: underline;
-				 font-weight: 1000;
-				 font-size: 30px;
+				letter-spacing: 10px;
+				font-weight: 1000;
+				font-size: 50px;
 			}
+			.link {
+				background-color: #f6dcd3;
+				box-shadow: 0 5px 0 #b86b77;
+				color: #fcfcfc;
+				padding: 1em 1.5em;
+				position: relative;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			.link:hover {
+				background-color: #b86b77;
+				cursor: pointer;
+			}
+
+			.link:active {
+				box-shadow: none;
+				top: 5px;
+			}
+			ul {
+			  list-style: none; /* Remove default bullets */
+			}
+			.header-container{
+				display:grid;
+				grid-template-columns: 30% 70%;
+				margin-right: 200px;
+				margin-left: 200px;
+			}
+			.center{
+				display:grid;
+				justify-content: center;
+				align-items: center;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -167,45 +200,94 @@
 				<div></div>			
 			</div>
 		</div>
-		<div class="white-container">
-			<div class="image-cropper">
-				<img class="circle-pic" src="mobile_photos/circle1.jpg">
+
+		<div class="white">
+			<div class="white-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle1.jpg">
+				</div>
+			</div>
+			<div class="white-text-container">
+				
+				<div class="header-container">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<h3 class="info info-header">婚禮時間</h3>	
+				</div>
+				<p class="info">12:00 - 13:00 愉景灣白教堂</p>
+				<p class="info">13:00 - 16:00 午宴</p>
+				<div style="padding-top:40px;" class="center">
+					<a class="link" href="http://maps.google.com/?q=%E6%84%89%E6%99%AF%E7%81%A3%E6%B5%B7%E6%BF%B1%E7%99%BD%E6%95%99%E5%A0%82">按此開啟地圖</a>
+				</div>
 			</div>
 		</div>
-		<div class="white-text-container">
-			<h3 class="info info-header">往愉景灣交通</h2>
-			<h3 class="info">我們為你安排了免費旅遊巴, 上車地點及時間如下:</h3>
-			<h3 class="info">10:30 將軍澳 XX街</h3>
-			<h3 class="info">10:50 九龍塘 MTR</h3>
-			<h3 class="info">11:00 欣澳地鐵A出口</h3>
-		</div>
-		<div class="pink-container">
-			<div class="image-cropper">
-				<img class="circle-pic" src="mobile_photos/circle2.jpg">
+		<div class="pink">
+			<div class="pink-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle1.jpg">
+				</div>
+			</div>
+			<div class="pink-text-container">
+				<div class="header-container">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<h3 class="info info-header">旅遊巴接送</h3>
+				</div>
+				<div class="center"><p class="info">11:00 欣澳地鐵A出口</p></div>
+				<div class="center"><p class="info">10:50 九龍塘 MTR</p></div>
+				<div class="center"><p class="info">10:30 將軍澳</p></div>
 			</div>
 		</div>
-		<div class="pink-text-container">
-			<h3 class="info info-header">其他交通:</h3>
-			<h3 class="info">欣澳站A出口</h3>
-			<h3 class="info">換乘DB03P巴士</h3>
-		</div>
-		<div class="white-container">
-			<div class="image-cropper">
-				<img class="circle-pic" src="mobile_photos/circle3.jpg">
+		<div class="white">
+			<div class="white-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle2.jpg">
+				</div>
+			</div>
+			<div class="white-text-container">
+				<div class="header-container" style="grid-template-columns: 50% 30%;">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<h3 class="info info-header">地鐵</h3>
+				</div>
+				<p class="info">欣澳站A出口</p>
+				<p class="info">換乘DB03P巴士</p>
 			</div>
 		</div>
-		<div class="white-text-container">
-			<h3 class="info info-header">愉景灣客輪:</h2>
-			<h3 class="info">中環3 號碼頭乘坐客輪</h3>
-			<h3 class="info">換乘 T4 或 T9 巴士</h3>
-		</div>
-		<div class="pink-container">
-			<div class="image-cropper">
-				<img class="circle-pic" src="mobile_photos/circle4.jpg">
+		<div class="pink">
+			<div class="pink-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle3.jpg">
+				</div>
+			</div>
+			<div class="pink-text-container">
+				<div class="header-container">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<h3 class="info info-header">愉景灣客輪</h3>
+				</div>
+				<p class="info">中環3 號碼頭乘坐客輪</p>
+				<p class="info">換乘 T4 或 T9 巴士</p>
 			</div>
 		</div>
-		<div class="pink-text-container">
-			<h3 class="info">請注意, 私家車不能進入愉景灣</h3>
+		<div class="white">
+			<div class="white-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle4.jpg">
+				</div>
+			</div>
+			<div class="white-text-container">
+				<div class="header-container" style="grid-template-columns: 10% 100%;">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<p class="info" style="font-family: 'Dancing Script', cursive;">Join us for our wedding!</p>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
