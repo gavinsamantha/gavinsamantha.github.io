@@ -1,0 +1,227 @@
+.outer-gallery-container{
+	border: 10px solid #ffc0cb;
+	display: grid;
+	grid-template-rows: 18%;
+	justify-items: center;
+}
+
+.top-deco{
+	width: 100%;
+	margin-top: 3rem;
+}
+
+.gallery-container{
+	display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(24, 5vw);
+    grid-gap: 2vw;
+	margin: 0 3.5vw 0 3.5vw;
+}
+.photosquare{
+	background-color: white;
+	overflow: hidden;
+	border: 3px solid #ffc0cb;
+	border-radius: 25px;
+}
+
+.gallery-grid-photo{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.item2 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.item3 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+
+.item4 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 11;
+}
+
+.item5 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 7;
+    grid-row-end: 11;
+}
+
+.item6 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 11;
+    grid-row-end: 17;
+}
+.item7 {
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 11;
+    grid-row-end: 17;
+}
+.item8 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 17;
+    grid-row-end: 21;
+}
+.item9 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 17;
+    grid-row-end: 21;
+}
+.item10 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 17;
+    grid-row-end: 21;
+}
+.item11 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 21;
+    grid-row-end: 25;
+}
+.item12 {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 21;
+    grid-row-end: 25;
+}
+
+.ribbon {
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #ffeef2;
+}
+.ribbon-container{
+  position: absolute;
+  display: block;
+  width: 600px;
+  padding: 15px 0;
+  background-color: #ffeef2;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  font: 700 18px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* top left*/
+.ribbon-top-left {
+  top: -10px;
+  left: -10px;
+  z-index: 50;
+}
+.ribbon-top-left::before,
+.ribbon-top-left::after {
+	width: 20px;
+	height: 20px;
+	background-color: #ffeef2;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon-top-left::before {
+  top: -10;
+  right: 40;
+}
+.ribbon-top-left::after {
+  bottom: 40;
+  left: -10;
+}
+.ribbon-container {
+	height:50px;
+  right: -100px;
+  top: 100px;
+  transform: rotate(-45deg);
+}
+
+.heartbutton{
+		position: relative;
+		width: 60px;
+		height: 60px;
+		background-color: #ffc0cb;
+		transform: rotate(45deg);
+		animation: heartbeat 1.4s linear infinite	
+	}
+	.heartbutton:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #ffc0cb;
+		transform: translateY(-50%);
+		border-radius: 50%;
+	}
+
+	.heartbutton:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #ffc0cb;
+		transform: translateX(-50%);
+		border-radius: 50%;
+	}
+
+	.heartbutton.gallery{
+		background-color: #a83f39;
+	}
+	.heartbutton.gallery:before{
+		background-color: #a83f39;
+	}
+	.heartbutton.gallery:after{
+		background-color: #a83f39;
+	}
+
+	@keyframes heartbeat {
+		0% { transform: rotate(45deg) scale(1); }
+		25% { transform: rotate(45deg) scale(1); }
+		30% { transform: rotate(45deg) scale(1.4); }
+		50% { transform: rotate(45deg) scale(1.2); }
+		70% { transform: rotate(45deg) scale(1.4); }
+		100% { transform: rotate(45deg) scale(1); }
+	}
+
+	.button-container{
+		z-index: 60;
+		transform: rotate(-45deg);
+		top: 110px;
+		left: 120px;
+		position: relative;
+		width: 60px;
+		height: 60px;
+	}
