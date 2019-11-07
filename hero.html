@@ -1,0 +1,298 @@
+<html>
+	<head>
+		<meta property="og:image" content="mobile_photos/main.jpg">
+		<link href="https://fonts.googleapis.com/css?family=Dancing+Script:700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="modern-responsive-hamburger-navigation/style.css"/>
+		<link rel="stylesheet" type="text/css" href="photogallery.css"/>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+		<script src="modern-responsive-hamburger-navigation/scripts.js" defer></script>
+		<style>
+			body{
+				font-family: 'Dancing Script', cursive;
+				overflow-x: hidden;
+				margin: 0;
+				font-weight: normal;
+				font-style: normal;
+				color: white;
+				letter-spacing: 1.5px;
+				line-height: 1.5em;
+			}
+			.container{
+				text-align:	center;
+				position: relative;
+				border: 10px solid #f6dcd3;
+			}
+			.overlay1{
+				  display:inline-block;
+				  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+				  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+				  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+				  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+				  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+				  background: linear-gradient(to right bottom, rgba(255, 218, 187, 0.6), rgba(255, 218, 187, 0.6)); /* W3C */
+				  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+			}
+			.overlay{
+				  display:inline-block;
+				  background-color: rgba(128, 91, 84, 0.4); 
+			}
+			.white-container{
+				overflow:hidden;
+				display:grid;
+				justify-items: center;
+				padding-top: 100px;
+			}
+			.white-text-container{
+				overflow:hidden;
+				padding-bottom: 10%;
+			}
+			.pink{
+				background-color: #f6dcd3; 
+			}
+			.pink-container{
+				overflow:hidden;
+				display:grid;
+				justify-items: center;
+				padding-top: 100px;
+				background-color: #f6dcd3; 
+				padding-bottom: 100px;
+			}
+			.pink-text-container{
+				overflow:hidden;
+				background-color: #f6dcd3;
+				padding-bottom: 10%;
+			}
+			.image-cropper {
+				width: 500px;
+				height: 500px;
+				position: relative;
+				overflow: hidden;
+				border-radius: 50%;
+			}
+			.circle-pic {
+			  display: inline;
+			  margin: 0 auto;
+			  height: 100%;
+			  width: 500px;
+			  object-fit: cover;
+			}
+			.hero{
+				position:relative;
+				z-index:-1;
+				display:block;
+				width: 100%;
+			}
+			.heading-container{
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				margin: auto;
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+				display: grid;
+				grid-template-rows: 50% 40% 10%;
+				justify-items: center;
+				align-items: center;
+			}
+			.header{
+				padding-top: 80px;
+			}
+			h2{
+				font-size: 80px;
+			}
+			h1{
+				font-size: 60px;
+			}
+			h6{
+				font-size: 40px;
+			}	
+			h3{
+				font-size: 20px;
+				color: black;
+			}
+			.info{
+				font-family: 'Noto Sans TC', sans-serif;
+				font-size: 35px;
+				text-align: center;
+				line-height: 2.5;
+				color: black;
+			}
+			.info-header{
+				letter-spacing: 10px;
+				font-weight: bold;
+				font-size: 50px;
+			}
+			.link {
+				background-color: #f6dcd3;
+				box-shadow: 0 5px 0 #b86b77;
+				color: #b86b77;
+				padding: 1em 1.5em;
+				position: relative;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+			.link:hover {
+				background-color: #b86b77;
+				cursor: pointer;
+			}
+
+			.link:active {
+				box-shadow: none;
+				top: 5px;
+			}
+			ul {
+			  list-style: none; /* Remove default bullets */
+			}
+			.header-container{
+				display:grid;
+				grid-template-columns: 30% 70%;
+				margin-right: 200px;
+				margin-left: 200px;
+			}
+			.center{
+				display:grid;
+				justify-content: center;
+				align-items: center;
+			}
+
+		</style>
+	</head>
+	<body>
+		<header class="navigation">
+			<a href="#" class="nav__trigger"><span class="nav__icon"></span></a>
+			<nav class="nav">
+				<div class="outer-gallery-container">
+					<div><img class="top-deco" src="mobile_photos/top-deco.png"></img></div>
+					<div class="gallery-container">
+						<div class="photosquare item1"><img class="gallery-grid-photo" src="mobile_photos/grid1.jpg"></img></div>
+						<div class="photosquare item2"><img class="gallery-grid-photo" src="mobile_photos/grid2.jpg"></img></div>
+						<div class="photosquare item3"><img class="gallery-grid-photo" src="mobile_photos/grid3.jpg"></img></div>				
+						<div class="photosquare item4"><img class="gallery-grid-photo" src="mobile_photos/grid4.jpg"></img></div>
+						<div class="photosquare item5"><img class="gallery-grid-photo" src="mobile_photos/grid5.jpg"></img></div>
+						<div class="photosquare item6"><img class="gallery-grid-photo" src="mobile_photos/grid6.jpg"></img></div>
+						<div class="photosquare item7"><img class="gallery-grid-photo" src="mobile_photos/grid7.jpg"></img></div>
+						<div class="photosquare item8"><img class="gallery-grid-photo" src="mobile_photos/grid8.jpg"></img></div>
+						<div class="photosquare item9"><img class="gallery-grid-photo" src="mobile_photos/grid9.jpg"></img></div>
+						<div class="photosquare item10"><img class="gallery-grid-photo" src="mobile_photos/grid10.jpg"></img></div>
+						<div class="photosquare item11"><img class="gallery-grid-photo" src="mobile_photos/grid11.jpg"></img></div>
+						<div class="photosquare item12"><img class="gallery-grid-photo" src="mobile_photos/grid12.jpg"></img></div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<div class="overlay">
+				<div class="ribbon ribbon-top-left">
+					<div class="button-container">
+						<div class="heartbutton"></div>
+					</div>
+					<div class="ribbon-container"></div>
+				</div>
+				<img class="hero" src="mobile_photos/main.jpg" />
+			</div>
+			<div class="heading-container">
+				<div>
+					<h1 class="header">WE'RE GETTING MARRIED!</h1>
+					<h6 class="">on 23rd November 2019</h6>
+				</div>
+				<h2 class="header">Samantha & Gavin</h2>
+				<div></div>			
+			</div>
+		</div>
+
+		<div class="white">
+			<div class="white-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle1.jpg">
+				</div>
+			</div>
+			<div class="white-text-container">
+				
+				<div class="header-container">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<h3 class="info info-header">婚禮時間</h3>	
+				</div>
+				<p class="info">12:00 - 13:00 愉景灣白教堂</p>
+				<p class="info">13:00 - 16:00 午宴</p>
+				<div style="padding-top:40px;" class="center">
+					<a class="link" href="http://maps.google.com/?q=%E6%84%89%E6%99%AF%E7%81%A3%E6%B5%B7%E6%BF%B1%E7%99%BD%E6%95%99%E5%A0%82">按此開啟地圖</a>
+				</div>
+			</div>
+		</div>
+		<div class="pink">
+			<div class="pink-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle2.jpg">
+				</div>
+			</div>
+			<div class="pink-text-container">
+				<div class="header-container">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<h3 class="info info-header">旅遊巴接送</h3>
+				</div>
+				<div class="center"><p class="info">11:00 欣澳地鐵A出口</p></div>
+				<div class="center"><p class="info" style="line-height:0;">10:50 九龍塘 MTR 理想酒店外</p></div>
+				<div class="center"><p class="info" style="line-height:0;font-size:15px;">車牌: NL6008</p></div>
+				<div class="center" style="margin-top:60px;"><p class="info" style="line-height:0;">10:30 寶琳 MTR 的士站外</p></div>
+				<div class="center"><p class="info" style="line-height:0;font-size:15px;">車牌: TP6248</p></div>
+			</div>
+		</div>
+		<div class="white">
+			<div class="white-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle3.jpg">
+				</div>
+			</div>
+			<div class="white-text-container">
+				<div class="header-container" style="grid-template-columns: 50% 30%;">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<h3 class="info info-header">地鐵</h3>
+				</div>
+				<p class="info">欣澳站A出口</p>
+				<p class="info">換乘DB03P巴士</p>
+			</div>
+		</div>
+		<div class="pink">
+			<div class="pink-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle4.jpg">
+				</div>
+			</div>
+			<div class="pink-text-container">
+				<div class="header-container">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<h3 class="info info-header">愉景灣客輪</h3>
+				</div>
+				<p class="info">中環3 號碼頭乘坐客輪</p>
+				<p class="info">換乘 T4 或 T9 巴士</p>
+			</div>
+		</div>
+		<div class="white">
+			<div class="white-container">
+				<div class="image-cropper">
+					<img class="circle-pic" src="mobile_photos/circle5.jpg">
+				</div>
+			</div>
+			<div class="white-text-container">
+				<div class="header-container" style="grid-template-columns: 10% 100%;height:400px;">
+					<div class="center">
+						<div class="heartbutton"></div>
+					</div>
+					<div class="center">
+						<p class="info" style="font-family: 'Dancing Script', cursive;">Join us for our wedding!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
